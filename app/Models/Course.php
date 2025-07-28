@@ -13,4 +13,10 @@ class Course extends Model
 public function materials() {
     return $this->hasMany(Material::class);
 }
+ 
+    protected $fillable = [
+        'name',
+        'department_id',
+        'course_id',
+    ];
 }

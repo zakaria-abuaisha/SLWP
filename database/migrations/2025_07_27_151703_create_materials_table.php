@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('materials', function (Blueprint $table) {
-           $table->id();
+    $table->id();
     $table->foreignId('course_id')->constrained()->onDelete('cascade');
     $table->foreignId('category_id')->constrained()->onDelete('cascade');
     $table->string('title');
     $table->text('description');
-    $table->enum('state', ['approved', 'declined', 'pending']);
+    $table->enum('state', ['approved', 'declined', 'pending'])->default('pending');
     $table->timestamps();
         });
     }

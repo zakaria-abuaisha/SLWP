@@ -12,4 +12,10 @@ class Asset extends Model
 public function fileType() {
     return $this->belongsTo(FileType::class);
 }
+  protected $fillable = [
+        'file_path',
+        'material_id',
+        'file_type_id',
+        'assets_id',
+    ];
 }

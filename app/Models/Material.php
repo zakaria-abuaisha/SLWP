@@ -17,4 +17,12 @@ class Material extends Model
     public function assets() {
         return $this->hasMany(Asset::class);
     }
+     protected $fillable = [
+        'material_id',
+        'course_id',
+        'category_id',
+        'title',
+        'description',
+        'state',
+    ];
 }

@@ -10,4 +10,9 @@ class FileType extends Model
     {
         return $this->hasMany(Asset::class, 'file_type_id');
     }
+
+    protected $fillable = [
+        'file_type_id',
+        'name',
+    ];
 }

@@ -8,5 +8,11 @@ class Category extends Model
 {
      public function materials() {
     return $this->hasMany(Material::class);
+    
 }
+
+    protected $fillable = [
+        'name',
+        'categorie_id'
+    ];
 }
